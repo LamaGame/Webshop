@@ -3,25 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout</title>
+    <title>Checkout - Retro Console Shop</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 </head>
 <body>
 
 <header>
-    <h1>Checkout</h1>
+    <h1>🛒 Checkout</h1>
     <nav>
         <a href="index.html">Home</a>
         <a href="products.html">Products</a>
     </nav>
 </header>
 
-<main>
-    <h2>Your Cart</h2>
-    <div id="cart"></div>
-    <button onclick="checkout()">Complete Purchase</button>
-</main>
+<!-- Checkout Section -->
+<section class="checkout container">
+    <h2>Review Your Order</h2>
+
+    <div class="cart-item">
+        <img src="images/nes.jpg" alt="NES Console">
+        <div class="item-details">
+            <h3>NES Console</h3>
+            <p>Price: $99.99</p>
+            <div class="quantity-controls">
+                <button class="qty-btn" onclick="changeQuantity(-1, 'nesQty')">-</button>
+                <input type="text" id="nesQty" value="1" readonly>
+                <button class="qty-btn" onclick="changeQuantity(1, 'nesQty')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart-item">
+        <img src="images/snes.jpg" alt="SNES Console">
+        <div class="item-details">
+            <h3>Super Nintendo</h3>
+            <p>Price: $119.99</p>
+            <div class="quantity-controls">
+                <button class="qty-btn" onclick="changeQuantity(-1, 'snesQty')">-</button>
+                <input type="text" id="snesQty" value="1" readonly>
+                <button class="qty-btn" onclick="changeQuantity(1, 'snesQty')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart-total">
+        <h3>Total: $<span id="totalPrice">219.98</span></h3>
+    </div>
+
+    <button class="checkout-btn" onclick="completePurchase()">Complete Purchase</button>
+</section>
+
+<!-- Footer -->
+<footer class="container">
+    <p>© 2025 Retro Console Shop | <a href="#">Privacy Policy</a></p>
+</footer>
 
 </body>
 </html>
