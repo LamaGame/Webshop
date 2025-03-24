@@ -1,5 +1,13 @@
 /* Import Pixel Font */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Reset and Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Global Styling */
 body {
     background-color: #001a33;
